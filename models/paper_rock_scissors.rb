@@ -1,21 +1,23 @@
 class PaperRockScissors
 
-  def initialize(hand1, hand2)
-    @hand1 = hand1
-    @hand2 = hand2
-end
+  def initialize(hand_1, hand_2)
+    @hand_1 = hand_1
+    @hand_2 = hand_2
+  end
 
-def play_game(hand1, hand2)
-case
-when @hand1 = "rock" AND @hand2 = "paper" return "Hand2 wins"
-when @hand1 = "rock" AND @hand2 = "scissors" return "Hand1 wins"
-when @hand1 = "rock" AND @hand2 = "rock" return "Draw"
-when @hand1 = "paper" AND @hand2 = "rock" return "Hand1 wins"
-when @hand1 = "paper" AND @hand2 = "scissors" return "Hand2 wins"
-when @hand1 = "paper" AND @hand2 = "paper" return "Draw"
-when @hand1 = "scissors" AND @hand2 = "rock" return "Hand2 wins"
-when @hand1 = "scissors" AND @hand2 = "paper" return "Hand1 wins"
-when @hand1 = "scissors" AND @hand2 = "scissors" return "Draw"
-end
+  def play_game
 
+    case
+    when (@hand_1 == "rock" && @hand_2 == "paper"); return "Hand_2 wins with paper"
+    when (@hand_1 == "rock" && @hand_2 == "scissors"); return "Hand_1 wins with rock"
+    # when (@hand_1 == "rock" && @hand_2 == "rock"); return "Draw"
+  when (@hand_1 == "paper" && @hand_2 == "rock"); return "Hand_1 wins with paper"
+  when (@hand_1 == "paper" && @hand_2 == "scissors"); return "Hand_2 wins with scissors"
+    # when (@hand_1 == "paper" && @hand_2 == "paper"); return "Draw"
+  when (@hand_1 == "scissors" && @hand_2 == "rock"); return "Hand_2 wins with rock"
+  when (@hand_1 == "scissors" && @hand_2 == "paper"); return "Hand_1 wins with scissors"
+    # when (@hand_1 == "scissors" && @hand_2 == "scissors"); return "Draw"
+    when @hand_1 = @hand_2; return "Draw"
+      end
+  end
 end
